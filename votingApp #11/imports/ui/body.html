@@ -1,0 +1,18 @@
+<body>
+  <header>
+    <h1>Level Up Voting</h1>
+    {{> loginButtons}}
+  </header>
+  <main>
+    {{#if loggedIn}}
+      <form class='new-items'>
+        <input type="text" name='item1' placeholder="Item 1" />
+        <input type="text" name='item2' placeholder="Item 2" />
+        <input type="submit">
+      </form>
+    {{/if}}
+    {{#each items}}
+      {{> item}}
+    {{/each}}
+  </main>
+</body>
